@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+endpointApiVersion=38.0
+endpointEnvironment=Production/Developer Edition
+endpointServer=login.salesforce.com
+httpsProtocol=true
+ideVersion=38.0
+keependpoint=false
+metadataFormatVersion=38.0
+namespacePrefix=
+packageName=Trailhead Apex Superbadge
+preferToolingDeployment=true
+projectIdentifier=IDE6451969739978981419
+readTimeout=400
+sessionId=
+username=leefrances@cunning-badger-5qib4d.com
