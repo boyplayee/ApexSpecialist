@@ -19,8 +19,8 @@
                 <field>Equipment__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>Maintenance_Request__c</field>
+                <behavior>Edit</behavior>
+                <field>Vehicle__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>

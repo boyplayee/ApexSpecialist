@@ -224,10 +224,6 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Work_Part__c.Maintenance_Request__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <fields>TASK.SUBJECT</fields>
         <fields>TASK.WHO_NAME</fields>
         <fields>ACTIVITY.TASK</fields>
