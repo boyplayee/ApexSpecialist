@@ -23,7 +23,7 @@ public class MaintenanceRequestHelper {
         System.debug('product: '+mapProduct);
         
         // Now, let's make the magic happen 
-        for(Case maintenance:cases.values()){ // 여기서 받아온 파라미터값을 이용
+        for(Case maintenance:cases.values()){ // 맵 밸류값만큼 루프돌리기, 여기서 받아온 파라미터값을 이용
             Case maintenanceNew = new Case();
             
             maintenanceNew.Subject = maintenance.Subject;  //이런식으로 필드값 하나씩 넣을 수 있음 
@@ -31,7 +31,7 @@ public class MaintenanceRequestHelper {
             System.debug('Second: ' + mapProduct.get(maintenance.Equipment__c));
             if (mapProduct.get(maintenance.Equipment__c) != null) { //해당 Case의 Equipment를 mapProduct가 가지고있으면
             	
-            	// Set the Due Date for the next maintenance 오로지 Date_Due__c 필드값을 채우기 위해 이렇게 한것임 
+            	// Set the Due Date for the next maintenance 오로지 Date_Due__c 필드값을 채우기 위해 이렇게 한것임. value값으로 바로 찾음  
                  maintenanceNew.Date_Due__c = Date.today().addDays(Integer.valueOf(mapProduct.get(maintenance.Equipment__c)));
 
             }
