@@ -1,0 +1,2 @@
+<apex:page standardController="Work_Part__c" extensions="DetailButtonController" action="{!dosomething}">
+</apex:page>

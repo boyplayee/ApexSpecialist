@@ -1,4 +1,3 @@
-//later we will implement this class(in where?) Mission: gotta make a GET calloout and use @future
 public with sharing class WarehouseCalloutService {
 
     public static final String WAREHOUSE_URL = 'https://th-superbadge-apex.herokuapp.com/equipment';
@@ -35,6 +34,22 @@ public with sharing class WarehouseCalloutService {
         	if(products.size() > 0){
                 System.debug(products);
                 upsert products;
+                //여기서 왜 products만 해줬지?
+                //아..세일즈포스상에서 inventory정보를 싱크맞춰줘야해서??
+                //완전 같은 부품이라도 계속적으로 추가가 된다?
+                //UPSERT를 쓴 이유, update or insert...
+                //근데 어떤 id기준으로 upsert를 하는거지
+                //To determine whether a record already exists, 
+                //the upsert statement or Database method uses the record's ID
+                //as the key to match records, a custom external ID field, 
+                //or a standard field with the idLookup attribute set to true
+                //Apex Specialist 질문글중에..
+                //Your class maps the following fields: replacement part(always true),
+                //cost, current inventory, lifespan, maintenance cycle, and warehouse SKU.
+                //Use the warehouse SKU as the *external ID* to identify which equipment records
+                //to update within Salesforce.
+                //------->this confuses me..because there are multiple records with the exact same SKU
+                //-->it was because I didn't set the field to be unique !!!!!!! stupid..
             }
         }
     }
