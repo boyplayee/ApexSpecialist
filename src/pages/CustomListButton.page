@@ -1,0 +1,22 @@
+<apex:page standardController="Product2" recordSetVar="v">
+<!-- Begin Default Content REMOVE THIS -->
+<h1>Congratulations</h1>
+This is your new Page
+<!-- End Default Content REMOVE THIS -->
+    <apex:includeLightning />
+    <div id="lightning"></div>
+       
+        $Lightning.use("c.ModalsTest", function() {
+            //$Lightning.createComponent("c:windAdapter", 
+            $Lightning.createComponent("c:ModalsTest", 
+            {},
+            "lightning",
+            function(cmp) {
+                component = cmp;
+                checkCmp();
+                sforce.opencti.setSoftphonePanelVisibility({
+	                visible : true
+	            });
+            });
+        });
+</apex:page>
